@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: linear-gradient(150deg, #181818, #2a2a2a);
+}
+
+
+.digital-clock {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    background-color: white;
+    border: 8px solid #24ade3;
+    border-radius: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock .box {
+    width: 98%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background: linear-gradient(45deg, #181818, #2a2a2a);
+    border-radius: 250px;
+}
+
+/* .clock .box .date, */
+.clock .box .time{
+    margin-top: 40px;
+}
+    
+
+.clock .box .time span{
+    color: #24ade3;
+    font-size: 120px;
+    position: relative;
+   
+}
+
+.clock .box .time #am-pm{
+    font-size: 40px;
+}
+
+.clock .box .date span{
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.clock .box .date span,
+.clock .box .time span{
+    margin-right: 10px;
+
+}
+
+.clock .box .time span::after{
+    font-size: 20px;
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clock .box .time #hrs::after{
+    content: "HOUR'S";
+}
+.clock .box .time #min::after{
+    content: "MIN'S";
+}
+.clock .box .time #sec::after{
+    content: "SEC";
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .clock {
+        max-width: 450px;
+    }
+
+    .clock .box .time span {
+        font-size: 2.5rem;
+    }
+
+    .clock .box .date span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .clock {
+        max-width: 350px;
+    }
+
+    .clock .box .time span {
+        font-size: 2rem;
+    }
+
+    .clock .box .date span {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
